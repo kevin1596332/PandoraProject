@@ -1,0 +1,20 @@
+# Unity WebGL build 的常見大檔案類型用 Git LFS 管理
+*.data filter=lfs diff=lfs merge=lfs -text
+*.wasm filter=lfs diff=lfs merge=lfs -text
+*.js.gz filter=lfs diff=lfs merge=lfs -text
+*.data.gz filter=lfs diff=lfs merge=lfs -text
+*.wasm.gz filter=lfs diff=lfs merge=lfs -text
+
+# 有些時候 Build 的 index.html 也蠻大，但一般小於 100MB，不一定需要 LFS
+# 如果想保險一點，也可以加
+# *.html filter=lfs diff=lfs merge=lfs -text
+
+# 以下是 Unity 常見的資源包（可選）
+*.unity3d filter=lfs diff=lfs merge=lfs -text
+*.bundle filter=lfs diff=lfs merge=lfs -text
+
+# 假如有上傳素材（例如模型/貼圖）
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
